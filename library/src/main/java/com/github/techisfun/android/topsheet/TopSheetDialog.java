@@ -18,12 +18,16 @@ package com.github.techisfun.android.topsheet;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.StyleRes;
+
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
+
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.appcompat.app.AppCompatDialog;
+
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -134,7 +138,7 @@ public class TopSheetDialog extends AppCompatDialog {
             // If the provided theme is 0, then retrieve the dialogTheme from our theme
             TypedValue outValue = new TypedValue();
             if (context.getTheme().resolveAttribute(
-                    android.support.design.R.attr.bottomSheetDialogTheme, outValue, true)) {
+                    R.attr.bottomSheetDialogTheme, outValue, true)) {
                 themeId = outValue.resourceId;
             } else {
                 // bottomSheetDialogTheme is not provided; we default to our light theme

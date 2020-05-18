@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Parcel;
 import android.os.Parcelable;
+
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
@@ -32,6 +33,7 @@ import androidx.core.view.NestedScrollingChild;
 import androidx.core.view.VelocityTrackerCompat;
 import androidx.core.view.ViewCompat;
 import androidx.customview.widget.ViewDragHelper;
+
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
@@ -166,11 +168,11 @@ public class TopSheetBehavior<V extends View> extends CoordinatorLayout.Behavior
     public TopSheetBehavior(Context context, AttributeSet attrs) {
         super(context, attrs);
         TypedArray a = context.obtainStyledAttributes(attrs,
-                android.support.design.R.styleable.BottomSheetBehavior_Layout);
+                R.styleable.BottomSheetBehavior_Layout);
         setPeekHeight(a.getDimensionPixelSize(
-                android.support.design.R.styleable.BottomSheetBehavior_Layout_behavior_peekHeight, 0));
-        setHideable(a.getBoolean(android.support.design.R.styleable.BottomSheetBehavior_Layout_behavior_hideable, false));
-        setSkipCollapsed(a.getBoolean(android.support.design.R.styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed,
+                R.styleable.BottomSheetBehavior_Layout_behavior_peekHeight, 0));
+        setHideable(a.getBoolean(R.styleable.BottomSheetBehavior_Layout_behavior_hideable, false));
+        setSkipCollapsed(a.getBoolean(R.styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed,
                 false));
         a.recycle();
         ViewConfiguration configuration = ViewConfiguration.get(context);
